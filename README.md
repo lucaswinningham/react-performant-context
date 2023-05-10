@@ -1,3 +1,5 @@
+![image](https://github.com/lucaswinningham/performant-context/assets/24572180/b81b148d-8681-41bf-8152-d9279a181117)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
