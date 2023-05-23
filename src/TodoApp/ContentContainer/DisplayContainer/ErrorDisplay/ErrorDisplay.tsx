@@ -1,4 +1,4 @@
-import { useError } from 'TodoContext';
+import { useError } from '@/TodoApp/TodoContext';
 
 export const ErrorDisplay = () => {
   const error = useError();

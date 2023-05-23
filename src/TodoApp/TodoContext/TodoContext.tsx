@@ -1,10 +1,10 @@
-import { useCallback } from 'react';
+import { ReactNode, useCallback, useEffect } from 'react';
 
-import { createContext, useList } from 'utils';
-import type { Todo } from 'Todo';
+import { createContext, useList } from '@/utils';
+import type { TTodo } from '@/TodoApp/TTodo';
 
 type TodoContext = {
-  todos: Todo[];
+  todos: TTodo[];
   count: number;
   error: string | null;
   id: number | null;
@@ -17,10 +17,15 @@ const initial: TodoContext = {
   error: null,
   id: null,
   loading: false,
+  // onSubmit: () => {},
   // someNestedObject: {}, // Don't nest other objects!
 };
 
-const { Provider, useData, useSetData } = createContext(initial);
+const {
+  Provider,
+  useData,
+  useSetData,
+} = createContext(initial);
 
 export { Provider, useSetData };
 
@@ -34,11 +39,11 @@ const useTodoList = () => {
   const todos = useTodos();
   const setData = useSetData();
   const setTodos = useCallback(
-    (callback: (todos: Todo[]) => Todo[]) => setData({ todos: callback(todos) }),
+    (callback: (todos: TTodo[]) => TTodo[]) => setData({ todos: callback(todos) }),
     [setData, todos],
   );
 
-  const { add: addTodo, remove: removeTodo, toggle: toggleTodo } = useList<Todo, Todo['id']>({
+  const { add: addTodo, remove: removeTodo, toggle: toggleTodo } = useList<TTodo, TTodo['id']>({
     list: todos,
     setList: setTodos,
     id: ({ id }) => id,

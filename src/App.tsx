@@ -1,17 +1,5 @@
-import { Provider } from 'TodoContext';
+import { TodoApp } from '@/TodoApp';
 
-import { ContentContainer } from './ContentContainer';
-
-function App() {
-  return (
-    <Provider>
-      <div className="container">
-        <h1>App</h1>
-
-        <ContentContainer />
-      </div>
-    </Provider>
-  );
-}
+const App = () => <TodoApp />;
 
 export default App;

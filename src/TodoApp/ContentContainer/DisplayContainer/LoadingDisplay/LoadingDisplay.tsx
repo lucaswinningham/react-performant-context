@@ -1,4 +1,4 @@
-import { useLoading } from 'TodoContext';
+import { useLoading } from '@/TodoApp/TodoContext';
 
 export const LoadingDisplay = () => {
   const loading = useLoading();

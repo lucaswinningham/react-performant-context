@@ -1,4 +1,4 @@
-import { useCount } from 'TodoContext';
+import { useCount } from '@/TodoApp/TodoContext';
 
 export const CountDisplay = () => {
   const count = useCount();

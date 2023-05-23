@@ -1,5 +1,5 @@
-import { useAddTodo, useId, useSetData, useTodos } from 'TodoContext';
-import { fetchTodo } from 'fetchTodo';
+import { useAddTodo, useId, useSetData, useTodos } from '@/TodoApp/TodoContext';
+import { fetchTodo } from '@/fetchTodo';
 
 export const SubmitButton = () => {
   const setData = useSetData();
@@ -8,6 +8,8 @@ export const SubmitButton = () => {
   const id = useId();
 
   const handleClick = async () => {
+    if (todos.map(({ id: todoId }) => todoId).includes(id!)) return;
+
     setData({ loading: true });
 
     const { todo, error } = await fetchTodo(id!);

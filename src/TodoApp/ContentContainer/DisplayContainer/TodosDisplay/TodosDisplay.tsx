@@ -1,4 +1,4 @@
-import { useTodos } from 'TodoContext';
+import { useTodos } from '@/TodoApp/TodoContext';
 
 export const TodosDisplay = () => {
   const todos = useTodos();

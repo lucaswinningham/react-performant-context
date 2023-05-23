@@ -4,6 +4,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Additional configuration (absolute imports) accessible through the usage of [CRACO](https://github.com/dilanx/craco) and following [this guide](https://plusreturn.com/blog/how-to-configure-a-path-alias-in-a-react-typescript-app-for-cleaner-imports/)
+
 ## Available Scripts
 
 In the project directory, you can run:
